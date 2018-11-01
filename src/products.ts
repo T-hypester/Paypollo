@@ -26,5 +26,12 @@ export default [
     image: 'SP747_mbp13-gray.jpg',
     name: "MacBook Pro 2016 Space Gray",
     price: 2000
+  },
+  {
+    code: "AIRPODS",
+    description: "Apple AirPods ",
+    image: 'MMEF2.jpeg',
+    name: "Apple AirPods",
+    price: 179
   }
 ] as IPaypolloProduct[];
