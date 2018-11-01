@@ -40,5 +40,12 @@ export default [
     image: 'homepod.jpeg',
     name: "Apple HomePod",
     price: 349
+  },
+  {
+    code: "MAVICAIR",
+    description: "Mavic Air drone racing videocamera 4K",
+    image: 'mavic air.jpg',
+    name: "Mavic Air",
+    price: 749
   }
 ] as IPaypolloProduct[];
