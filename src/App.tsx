@@ -11,21 +11,21 @@ import {
 
 import products, { IPaypolloProduct } from "./products";
 
-import Cart, { ICartProps } from "./Cart";
+import Cart, { ICart } from "./Cart";
 import Product from "./Product";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
 interface IPaypolloStoreState {
-  cart: ICartProps;
+  cart: ICart;
   productFilter?: string;
   products: IPaypolloProduct[];
 }
 
 class App extends React.Component<{}, IPaypolloStoreState> {
   public readonly state: IPaypolloStoreState = {
-    cart: { items: [] } as ICartProps,
+    cart: { items: [] } as ICart,
     products
   };
 
@@ -50,7 +50,7 @@ class App extends React.Component<{}, IPaypolloStoreState> {
             />
           </Grid.Column>
           <Grid.Column width="8" textAlign="right">
-            <Cart {...this.state.cart} />
+            <Cart {...this.state.cart} onUpdate={this.onCartUpdate} />
           </Grid.Column>
         </Grid>
         <Card.Group className="Product" itemsPerRow="4">
@@ -67,6 +67,12 @@ class App extends React.Component<{}, IPaypolloStoreState> {
       </Container>
     );
   }
+
+  private onCartUpdate = (cart: ICart) => {
+    this.setState({
+      cart
+    });
+  };
 
   private onSearchChange = (
     event: React.ChangeEvent<HTMLInputElement>,
