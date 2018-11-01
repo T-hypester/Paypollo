@@ -122,7 +122,7 @@ function filterProduct(product: IPaypolloProduct, filter: string) {
   return (
     product.name.toLowerCase().search(filter) +
       (product.description || "").toLowerCase().search(filter) >
-    0
+    -2
   );
 }
 
