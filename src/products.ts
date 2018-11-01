@@ -40,5 +40,12 @@ export default [
     image: 'homepod.jpeg',
     name: "Apple HomePod",
     price: 349
+  },
+  {
+    code: "HOVERBOARD",
+    description: "A fantastic hoverboard",
+    image: "hoverboard-with-lights-blue.jpg",
+    name: "Hoverboard",
+    price: 159
   }
 ] as IPaypolloProduct[];
