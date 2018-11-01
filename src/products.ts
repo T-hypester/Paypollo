@@ -1,3 +1,9 @@
+export function getImagePath(product: { image?: string }) {
+  return product.image ? `${process.env.PUBLIC_URL}/images/products/${
+    product.image
+    }` : undefined
+}
+
 export interface IPaypolloProduct {
   code: string;
   description?: string;

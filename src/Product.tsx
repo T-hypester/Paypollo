@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, Card, Image } from "semantic-ui-react";
 
-import { IPaypolloProduct } from "./products";
+import { IPaypolloProduct, getImagePath } from "./products";
 
 interface IProductProps extends IPaypolloProduct {
   onBuy: (
@@ -16,9 +16,7 @@ export default class extends React.Component<IProductProps> {
       <Card key={this.props.code}>
         {this.props.image ? (
           <Image
-            src={`${process.env.PUBLIC_URL}/images/products/${
-              this.props.image
-            }`}
+            src={getImagePath(this.props)}
           />
         ) : null}
         <Card.Content>

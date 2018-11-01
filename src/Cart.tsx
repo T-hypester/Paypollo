@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, Dropdown, Header, Icon, Modal } from "semantic-ui-react";
 
-import { IPaypolloProduct } from "./products";
+import { getImagePath, IPaypolloProduct } from "./products";
 
 interface ICartItem extends IPaypolloProduct {
   quantity: number;
@@ -31,7 +31,7 @@ export default class extends React.Component<ICartProps, ICartState> {
           ...cart.items,
           <Dropdown.Item
             description={item.quantity}
-            image={item.image}
+            image={getImagePath(item)}
             key={item.code}
             text={item.name}
             style={{ minWidth: "300px" }}
