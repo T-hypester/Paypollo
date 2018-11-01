@@ -54,5 +54,12 @@ export default [
     image: "mavic air.jpg",
     name: "Mavic Air",
     price: 749
+  },
+  {
+    code: "GALAXYS9",
+    description: "Samsung Galaxy S9",
+    image: "galaxy s9.jpeg",
+    name: "Galaxy S9",
+    price: 499
   }
 ] as IPaypolloProduct[];
