@@ -33,5 +33,12 @@ export default [
     image: 'MMEF2.jpeg',
     name: "Apple AirPods",
     price: 179
+  },
+  {
+    code: "HOMEPOD",
+    description: "Apple HomePod",
+    image: 'homepod.jpeg',
+    name: "Apple HomePod",
+    price: 349
   }
 ] as IPaypolloProduct[];
