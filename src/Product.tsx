@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Card, Image } from "semantic-ui-react";
+import { Button, Card, Image, Modal, Header } from "semantic-ui-react";
 
 import { IPaypolloProduct, getImagePath } from "./products";
 
@@ -27,6 +27,28 @@ export default class extends React.Component<IProductProps> {
           <Card.Description>{this.props.description}</Card.Description>
         </Card.Content>
         <Card.Content extra={true}>
+          <Modal closeIcon={true} trigger={<Button content="Visualizza"
+            icon="eye"
+          />}>
+            <Modal.Header>{this.props.name}</Modal.Header>
+            <Modal.Content image scrolling>
+              <Image size='large' src={getImagePath(this.props)} />
+
+              <Modal.Description>
+                <Header>{this.props.price} €</Header>
+                <p>{this.props.description}</p>
+
+
+              </Modal.Description>
+            </Modal.Content>
+            <Modal.Actions>
+              <Button
+                icon="cart"
+                content="Aggiungi al carrello"
+                onClick={this.onAddToCartClick}
+              />
+            </Modal.Actions>
+          </Modal>
           <Button
             icon="cart"
             content="Aggiungi al carrello"
