@@ -75,5 +75,19 @@ export default [
     image: "Kingston.jpg",
     name: "Kingston chiavetta USB",
     price: 20
+  },
+  {
+    code: "CANON",
+    description: "Fotocamera Reflex, Nero, Lunghezza Focale 18-55 mm",
+    image: "canon.jpeg",
+    name: "Canon EOS 4000D",
+    price: 400
+  },
+  {
+    code: "IPHONEXR",
+    description: "Apple Iphone Xr 6 colori 2018",
+    image: "iphones xr.jpeg",
+    name: "Iphone Xr",
+    price: 889
   }
 ] as IPaypolloProduct[];
