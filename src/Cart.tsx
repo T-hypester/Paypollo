@@ -58,7 +58,8 @@ export default class extends React.Component<ICartProps, ICartState> {
           {cart.items}
           <Dropdown.Item description={`${cart.total} €`} text="Totale" />
           <Dropdown.Item>
-            <Button onClick={this.onPayClick}>Paga</Button>
+            {cart.items.length ?
+              <Button icon='money' onClick={this.onPayClick}>Paga</Button> : null}
             <Modal open={this.state.payModalOpen} basic={true} size="small">
               <Header
                 icon="money"
