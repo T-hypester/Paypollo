@@ -68,5 +68,12 @@ export default [
     image: "samsungevo.jpeg",
     name: "SSD Samsung",
     price: 140
+  },
+  {
+    code: "KINGUSB",
+    description: "Kingston DataTraveler SE9 G2 chiavetta 64GB USB 3.0",
+    image: "Kingston.jpg",
+    name: "Kingston chiavetta USB",
+    price: 20
   }
 ] as IPaypolloProduct[];
