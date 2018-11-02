@@ -74,7 +74,7 @@ export default [
     description: "Kingston DataTraveler SE9 G2 chiavetta 64GB USB 3.0",
     image: "Kingston.jpg",
     name: "Kingston chiavetta USB",
-    price: 20
+    price: 20.60
   },
   {
     code: "CANON",
@@ -89,5 +89,26 @@ export default [
     image: "iphones xr.jpeg",
     name: "Iphone Xr",
     price: 889
+  },
+  {
+    code: "PRUSA",
+    description: "L'Original Prusa I3 MK3 è il successore dell'acclamata stampante 3D Original Prusa i3 MK2. Grazie all'estrusore riprogettato, una pletora di sensori e il nuovo piano riscaldato magnetico MK52 con superficie rimovibile in acciaio flessibile rivestito in PEI,  siamo convinti di aver progettato la nostra migliore stampante fino ad ora!",
+    image: "prusa.jpg",
+    name: "Prusa I3 MK3",
+    price: 779
+  },
+  {
+    code: "HPPRINT",
+    description: "HP OfficeJet 3833 Stampante Multifunzione con 4 Mesi di Prova Gratuita del Servizio Instant Ink",
+    image: "stampanre.jpg",
+    name: "HP OfficeJet",
+    price: 42
+  },
+  {
+    code: "OCULUS",
+    description: "Oculus Rift il visore per la realtà virtuale",
+    image: "oculus.jpg",
+    name: "Oculus Rift",
+    price: 449
   }
 ] as IPaypolloProduct[];

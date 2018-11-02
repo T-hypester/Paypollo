@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Card, Image, Modal, Header } from "semantic-ui-react";
+import { Button, Card, Image, Modal, Header, Rating } from "semantic-ui-react";
 
 import { IPaypolloProduct, getImagePath } from "./products";
 
@@ -37,6 +37,7 @@ export default class extends React.Component<IProductProps> {
               <Modal.Description>
                 <Header>{this.props.price} €</Header>
                 <p>{this.props.description}</p>
+                <Rating icon='star' defaultRating={0} maxRating={5} />
 
 
               </Modal.Description>
