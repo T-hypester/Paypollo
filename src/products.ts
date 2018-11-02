@@ -15,14 +15,14 @@ export interface IPaypolloProduct {
 export default [
   {
     code: "MACBOOK",
-    description: "MacBooc pro di Zio. Usato 128Gb Space Gray 2016",
+    description: "MacBook pro di Zio. Usato 128Gb Space Gray 2016",
     image: "SP747_mbp13-gray.jpg",
     name: "MacBook Pro di Zio",
     price: 1500
   },
   {
     code: "MACBOOK2",
-    description: "MacBooc pro 256Gb ram 8Gb Space Gray 2016",
+    description: "MacBook pro 256Gb ram 8Gb Space Gray 2016",
     image: "SP747_mbp13-gray.jpg",
     name: "MacBook Pro 2016 Space Gray",
     price: 2000
@@ -43,23 +43,30 @@ export default [
   },
   {
     code: "HOVERBOARD",
-    description: "A fantastic hoverboard",
+    description: "Un hoverboard fantastico!",
     image: "hoverboard-with-lights-blue.jpg",
     name: "Hoverboard",
     price: 159
   },
   {
     code: "MAVICAIR",
-    description: "Mavic Air drone racing videocamera 4K",
+    description: "Il Mavic Air e un drone da racing con videocamera in 4K Fool HD",
     image: "mavic air.jpg",
     name: "Mavic Air",
     price: 749
   },
   {
     code: "GALAXYS9",
-    description: "Samsung Galaxy S9",
+    description: "Samsung Galaxy S9 Blue",
     image: "galaxy s9.jpeg",
     name: "Galaxy S9",
     price: 499
+  },
+  {
+    code: "EVO850",
+    description: "SSD Samsung Evo 850 da 250gb",
+    image: "samsungevo.jpeg",
+    name: "SSD Samsung",
+    price: 140
   }
 ] as IPaypolloProduct[];
