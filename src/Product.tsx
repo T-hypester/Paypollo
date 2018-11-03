@@ -36,10 +36,8 @@ export default class extends React.Component<IProductProps> {
 
               <Modal.Description>
                 <Header>{this.props.price} €</Header>
+                <Rating icon="star" defaultRating={0} maxRating={5} />
                 <p>{this.props.description}</p>
-                <Rating icon='star' defaultRating={0} maxRating={5} />
-
-
               </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
