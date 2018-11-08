@@ -10,6 +10,7 @@ export interface IPaypolloProduct {
   name: string;
   price: number;
   image?: string;
+  rating?: number;
 }
 
 export default [

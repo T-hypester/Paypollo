@@ -12,7 +12,7 @@ import {
 import products, { IPaypolloProduct } from "./products";
 
 import Cart, { ICart } from "./Cart";
-import Product from "./Product";
+import Product, { IProductProps } from "./Product";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
@@ -61,12 +61,30 @@ class App extends React.Component<{}, IPaypolloStoreState> {
                 {...product}
                 key={product.code}
                 onBuy={this.addProductToCart}
+                onRate={this.onProductRate}
+                rating={product.rating || 0}
               />
             ))}
         </Card.Group>
       </Container>
     );
   }
+
+  private onProductRate = (
+    event: React.SyntheticEvent,
+    data: IProductProps
+  ) => {
+    this.setState({
+      products: this.state.products.map(product =>
+        product.code === data.code
+          ? {
+              ...product,
+              rating: data.rating
+            }
+          : product
+      )
+    });
+  };
 
   private onCartUpdate = (cart: ICart) => {
     this.setState({
