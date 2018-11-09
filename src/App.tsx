@@ -29,6 +29,16 @@ class App extends React.Component<{}, IPaypolloStoreState> {
     products
   };
 
+  constructor(props: any) {
+    super(props);
+    let key;
+    for (let i = 0; (key = window.localStorage.key(i)); i++) {
+      this.state[key] = JSON.parse(
+        window.localStorage.getItem(key) || "undefined"
+      );
+    }
+  }
+
   public render() {
     const filter = this.state.productFilter
       ? this.state.productFilter.toLowerCase()
@@ -68,6 +78,17 @@ class App extends React.Component<{}, IPaypolloStoreState> {
         </Card.Group>
       </Container>
     );
+  }
+
+  public setState(update: any, cb?: () => void) {
+    super.setState(update, () => {
+      Object.keys(this.state).forEach(item => {
+        window.localStorage.setItem(item, JSON.stringify(this.state[item]));
+      });
+      if (cb) {
+        cb();
+      }
+    });
   }
 
   private onProductRate = (
